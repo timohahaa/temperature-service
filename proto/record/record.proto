@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/timohahaa/temperature-service/proto/record";
+
+service Record {
+  rpc GetAvgTemp(GetAvgTempReq) returns (GetAvgTempResp) {}
+}
+
+message GetAvgTempReq {
+  string date = 1;
+}
+
+message GetAvgTempResp {
+  float temperature = 1;
+}
